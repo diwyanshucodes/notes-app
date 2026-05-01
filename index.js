@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express();
 app.use(cors({
     origin: ['http://localhost:5173', 
-        'https://notes-client-brown.vercel.app/login'
+        'https://notes-client-brown.vercel.app'
     ]
 }))
 app.use(express.json());
