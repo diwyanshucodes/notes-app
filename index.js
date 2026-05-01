@@ -1,8 +1,13 @@
 const express = require('express');
 const notesRouter  = require('./routes/notes')
 const authRouter = require('./routes/auth');
+const cors = require('cors')
 const app = express();
-
+app.use(cors({
+    origin: ['http://localhost:5173', 
+        'https://notes-client-brown.vercel.app/login'
+    ]
+}))
 app.use(express.json());
 
 app.use('/api/auth', authRouter);
